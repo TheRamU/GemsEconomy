@@ -28,14 +28,14 @@ public class Configuration {
 
         config.options().header(plugin.getDescription().getName()
                 + "\n"
-                + "Version: " + plugin.getDescription().getVersion()
-                + "\nGemsEconomy Main Configuration file."
+                + "版本: " + plugin.getDescription().getVersion()
+                + "\nGemsEconomy 主配置文件。"
                 + "\n"
-                + "Developer(s): " + plugin.getDescription().getAuthors()
+                + "开发者: " + plugin.getDescription().getAuthors()
                 + "\n\n"
-                + "You have three valid storage methods, yaml, mysql or sqlite. If you choose mysql you would have to enter the database credentials down below."
+                + "您有三种有效的存储方法：yaml、mysql 或 sqlite。如果您选择 mysql，您需要在下面输入数据库凭据。"
                 + "\n"
-                + "All messages below are configurable, I hope you use them because it took 1 hour to make all of them into the plugin and configurable.");
+                + "下面的所有消息都是可配置的。");
 
         String path = "Messages.";
 
@@ -55,107 +55,107 @@ public class Configuration {
       //  config.addDefault("sqlite.file", "database.sqlite");
 
         config.addDefault("cheque.material", Material.PAPER.toString());
-        config.addDefault("cheque.name", "&aBank Note");
-        config.addDefault("cheque.lore", Arrays.asList("&7Worth: {value}.", "&7&oWritten by {player}"));
-        config.addDefault("cheque.console_name", "Console");
+        config.addDefault("cheque.name", "&a银行票据");
+        config.addDefault("cheque.lore", Arrays.asList("&7价值：{value}。", "&7&o由 {player} 开具"));
+        config.addDefault("cheque.console_name", "控制台");
         config.addDefault("cheque.enabled", true);
 
         config.addDefault(path + "prefix", "&2&lGemsEconomy> ");
-        config.addDefault(path + "nopermission", "&7You don't have permission to do this.");
-        config.addDefault(path + "noconsole", "&7Console cannot do this.");
-        config.addDefault(path + "invalidamount", "&7Not a valid amount.");
-        config.addDefault(path + "invalidpage", "&7Not a valid page number.");
-        config.addDefault(path + "pay_yourself", "&7You can't pay yourself.");
-        config.addDefault(path + "player_is_null", "&7The specified player does not exist.");
-        config.addDefault(path + "unknownCurrency", "&7Unknown Currency.");
-        config.addDefault(path + "unknownCommand", "&7Unknown sub-command.");
-        config.addDefault(path + "noDefaultCurrency", "&7No default currency.");
-        config.addDefault(path + "currencyExists", "&7Currency already exists.");
-        config.addDefault(path + "accountMissing", "&7Your account is missing. Please relog the server.");
-        config.addDefault(path + "cannotReceiveMoney", "&a{player}&7 can't receive money.");
-        config.addDefault(path + "insufficientFunds", "&7You don't have enough {currencycolor}{currency}&7!");
-        config.addDefault(path + "targetInsufficientFunds", "&e{target} &7don't have enough {currencycolor}{currency}&7!");
-        config.addDefault(path + "paid", "&7You were paid {currencycolor}{amount} &7from &a{player}&7.");
-        config.addDefault(path + "payer", "&7You paid {currencycolor}{amount} &7to &a{player}&7.");
-        config.addDefault(path + "payNoPermission", "&7You don't have permission to pay {currencycolor}{currency}&7.");
-        config.addDefault(path + "currencyNotPayable", "{currencycolor}{currency} &7is not payable.");
-        config.addDefault(path + "add", "&7You gave &a{player}&7: {currencycolor}{amount}. ");
-        config.addDefault(path + "take", "&7You took {currencycolor}{amount} &7from &a{player}&7.");
-        config.addDefault(path + "set", "&7You set &a{player}&7's balance to {currencycolor}{amount}&7.");
+        config.addDefault(path + "nopermission", "&7您没有权限执行此操作。");
+        config.addDefault(path + "noconsole", "&7控制台无法执行此操作。");
+        config.addDefault(path + "invalidamount", "&7无效的数量。");
+        config.addDefault(path + "invalidpage", "&7无效的页码。");
+        config.addDefault(path + "pay_yourself", "&7您不能给自己付款。");
+        config.addDefault(path + "player_is_null", "&7指定的玩家不存在。");
+        config.addDefault(path + "unknownCurrency", "&7未知货币。");
+        config.addDefault(path + "unknownCommand", "&7未知子命令。");
+        config.addDefault(path + "noDefaultCurrency", "&7没有默认货币。");
+        config.addDefault(path + "currencyExists", "&7货币已存在。");
+        config.addDefault(path + "accountMissing", "&7您的账户丢失。请重新登录服务器。");
+        config.addDefault(path + "cannotReceiveMoney", "&a{player}&7 无法接收资金。");
+        config.addDefault(path + "insufficientFunds", "&7您没有足够的 {currencycolor}{currency}&7！");
+        config.addDefault(path + "targetInsufficientFunds", "&e{target} &7没有足够的 {currencycolor}{currency}&7！");
+        config.addDefault(path + "paid", "&7您收到了来自 &a{player}&7 的 {currencycolor}{amount}&7。");
+        config.addDefault(path + "payer", "&7您向 &a{player}&7 支付了 {currencycolor}{amount}&7。");
+        config.addDefault(path + "payNoPermission", "&7您没有权限支付 {currencycolor}{currency}&7。");
+        config.addDefault(path + "currencyNotPayable", "{currencycolor}{currency} &7不可支付。");
+        config.addDefault(path + "add", "&7您给予了 &a{player}&7: {currencycolor}{amount}。 ");
+        config.addDefault(path + "take", "&7您从 &a{player}&7 那里取走了 {currencycolor}{amount}&7。");
+        config.addDefault(path + "set", "&7您将 &a{player}&7 的余额设置为 {currencycolor}{amount}&7。");
 
-        config.addDefault(path + "exchange_rate_set", "&7Set the exchange rate for {currencycolor}{currency} &7to &a{amount}&7.");
-        config.addDefault(path + "exchange_success_custom_other", "&7Successfully exchanged {currencycolor}({currEx}) &7for {currencycolor2}{receivedCurr}&7 to player {player}&7.");
-        config.addDefault(path + "exchange_success_custom", "&7Successfully exchanged {currencycolor}({currEx}) &7for {currencycolor2}{receivedCurr}&7.");
-        config.addDefault(path + "exchange_success", "&7Successfully exchanged {currencycolor}{ex_curr} &7for equivalent value in {currencycolor2}{re_curr}&7.");
-        config.addDefault(path + "exchange_command.no_perms.preset", "&7You don't have permission to exchange currencies with a preset rate.");
-        config.addDefault(path + "exchange_command.no_perms.custom", "&7You don't have permission to exchange currencies with a custom rate.");
+        config.addDefault(path + "exchange_rate_set", "&7已将 {currencycolor}{currency} &7的汇率设置为 &a{amount}&7。");
+        config.addDefault(path + "exchange_success_custom_other", "&7成功为玩家 {player}&7 将 {currencycolor}({currEx}) &7兑换为 {currencycolor2}{receivedCurr}&7。");
+        config.addDefault(path + "exchange_success_custom", "&7成功将 {currencycolor}({currEx}) &7兑换为 {currencycolor2}{receivedCurr}&7。");
+        config.addDefault(path + "exchange_success", "&7成功将 {currencycolor}{ex_curr} &7兑换为等值的 {currencycolor2}{re_curr}&7。");
+        config.addDefault(path + "exchange_command.no_perms.preset", "&7您没有权限使用预设汇率兑换货币。");
+        config.addDefault(path + "exchange_command.no_perms.custom", "&7您没有权限使用自定义汇率兑换货币。");
 
-        config.addDefault(path + "balance.current", "&a{player}&7's balance is: {currencycolor}{balance}");
-        config.addDefault(path + "balance.multiple", "&a{player}&7's balances:");
+        config.addDefault(path + "balance.current", "&a{player}&7 的余额为：{currencycolor}{balance}");
+        config.addDefault(path + "balance.multiple", "&a{player}&7 的余额：");
         config.addDefault(path + "balance.list", "&a&l>> {currencycolor}{format}");
-        config.addDefault(path + "balance.none", "&7No balances to show for &c{player}&7.");
+        config.addDefault(path + "balance.none", "&c{player}&7 没有余额可显示。");
 
         config.addDefault(path + "balance_top.balance", "&a&l-> {number}. {currencycolor}{player} &7- {currencycolor}{balance}");
-        config.addDefault(path + "balance_top.header", "&f----- {currencycolor} Top Balances for {currencyplural} &7(Page {page})&f -----");
-        config.addDefault(path + "balance_top.empty", "&7No accounts to display.");
-        config.addDefault(path + "balance_top.next", "{currencycolor}/gbaltop {currencyplural} {page} &7for more.");
-        config.addDefault(path + "balance_top.nosupport", "&a{storage} &7doesn't support /baltop.");
+        config.addDefault(path + "balance_top.header", "&f----- {currencycolor} {currencyplural} 余额排行榜 &7(第 {page} 页)&f -----");
+        config.addDefault(path + "balance_top.empty", "&7没有账户可显示。");
+        config.addDefault(path + "balance_top.next", "{currencycolor}/gbaltop {currencyplural} {page} &7查看更多。");
+        config.addDefault(path + "balance_top.nosupport", "&a{storage} &7不支持 /baltop 命令。");
 
-        config.addDefault(path + "cheque.success", "&7Cheque successfully written.");
-        config.addDefault(path + "cheque.redeemed", "&7Cheque has been cashed in.");
-        config.addDefault(path + "cheque.invalid", "&7This is not a valid cheque.");
+        config.addDefault(path + "cheque.success", "&7支票开具成功。");
+        config.addDefault(path + "cheque.redeemed", "&7支票已兑现。");
+        config.addDefault(path + "cheque.invalid", "&7这不是一张有效的支票。");
 
         config.addDefault(path + "help.eco_command", Arrays.asList(
-                "{prefix}&e&lEconomy Help",
-                "&2&l>> &a/eco give <user> <amount> [currency] &8- &7Give a player an amount of a currency.",
-                "&2&l>> &a/eco take <user> <amount> [currency] &8- &7Take an amount of a currency from a player.",
-                "&2&l>> &a/eco set <user> <amount> [currency] &8- &7Set a players amount of a currency."));
+                "{prefix}&e&l经济帮助",
+                "&2&l>> &a/eco give <用户> <数量> [货币] &8- &7给予玩家一定数量的货币。",
+                "&2&l>> &a/eco take <用户> <数量> [货币] &8- &7从玩家那里取走一定数量的货币。",
+                "&2&l>> &a/eco set <用户> <数量> [货币] &8- &7设置玩家的货币数量。"));
 
         config.addDefault(path + "help.exchange_command", Arrays.asList(
-                "{prefix}&b&lExchange Help",
-                "&2&l>> &a/exchange <account> <currency_to_exchange> <amount> <currency_to_receive> <amount> &8- &7Exchange between currencies with a custom rate for an account.",
-                "&2&l>> &a/exchange <currency_to_exchange> <amount> <currency_to_receive> <amount> &8- &7Exchange between currencies with a custom rate.",
-                "&2&l>> &a/exchange <currency_to_exchange> <amount> <currency_to_receive> &8- &7Exchange with a pre-set exchange rate."));
+                "{prefix}&b&l兑换帮助",
+                "&2&l>> &a/exchange <账户> <要兑换的货币> <数量> <要接收的货币> <数量> &8- &7为账户使用自定义汇率在货币之间进行兑换。",
+                "&2&l>> &a/exchange <要兑换的货币> <数量> <要接收的货币> <数量> &8- &7使用自定义汇率在货币之间进行兑换。",
+                "&2&l>> &a/exchange <要兑换的货币> <数量> <要接收的货币> &8- &7使用预设汇率进行兑换。"));
 
-        config.addDefault(path + "usage.pay_command", "&2&l>> &a/pay <user> <amount> [currency] &8- &7Pay the specified user the specified amount.");
-        config.addDefault(path + "usage.give_command", "&2&l>> &a/eco give <user> <amount> [currency] &8- &7Give a player an amount of a currency.");
-        config.addDefault(path + "usage.take_command", "&2&l>> &a/eco take <user> <amount> [currency] &8- &7Take an amount of a currency from a player.");
-        config.addDefault(path + "usage.set_command", "&2&l>> &a/eco set <user> <amount> [currency] &8- &7Set a players amount of a currency.");
+        config.addDefault(path + "usage.pay_command", "&2&l>> &a/pay <用户> <数量> [货币] &8- &7向指定用户支付指定数量。");
+        config.addDefault(path + "usage.give_command", "&2&l>> &a/eco give <用户> <数量> [货币] &8- &7给予玩家一定数量的货币。");
+        config.addDefault(path + "usage.take_command", "&2&l>> &a/eco take <用户> <数量> [货币] &8- &7从玩家那里取走一定数量的货币。");
+        config.addDefault(path + "usage.set_command", "&2&l>> &a/eco set <用户> <数量> [货币] &8- &7设置玩家的货币数量。");
 
-        config.addDefault(path + "help.cheque_command", Arrays.asList("{prefix}&e&lCheque Help",
-                "&2&l>> &a/cheque write <amount> [currency] &8- &7Write a cheque with a specified amount and currency.",
-                "&2&l>> &a/cheque redeem &8- &7Redeem the cheque."));
+        config.addDefault(path + "help.cheque_command", Arrays.asList("{prefix}&e&l支票帮助",
+                "&2&l>> &a/cheque write <数量> [货币] &8- &7开具指定数量和货币的支票。",
+                "&2&l>> &a/cheque redeem &8- &7兑现支票。"));
 
-        config.addDefault(path + "help.currency_command", Arrays.asList("{prefix}&e&lCurrency Help",
-                "&2&l>> &a/currency create <singular> <plural> &8- &7Create a currency.",
-                "&2&l>> &a/currency delete <plural> &8- &7Delete a currency.",
-                "&2&l>> &a/currency convert <method> &8- &7Convert storage method. WARN: Take backups first and make sure the storage you are switching to is empty!",
-                "&2&l>> &a/currency backend <method> &8- &7Switch backend. This does not convert.",
-                "&2&l>> &a/currency view <plural> &8- &7View information about a currency.",
-                "&2&l>> &a/currency list &8- &7List of currencies.",
-                "&2&l>> &a/currency symbol <plural> <char|remove> &8- &7Select a symbol for a currency or remove it.",
-                "&2&l>> &a/currency color <plural> <color> &8- &7Select a color for a currency.",
-                "&2&l>> &a/currency colorlist &8- &7List of Colors.",
-                "&2&l>> &a/currency decimals <plural> &8- &7Enable decimals for a currency.",
-                "&2&l>> &a/currency payable <plural> &8- &7Set a currency payable or not.",
-                "&2&l>> &a/currency default <plural> &8- &7Set a currency as default.",
-                "&2&l>> &a/currency startbal <plural> <amount> &8- &7Set the starting balance for a currency.",
-                "&2&l>> &a/currency setrate <plural> <amount> &8- &7Sets the currency's exchange rate."));
+        config.addDefault(path + "help.currency_command", Arrays.asList("{prefix}&e&l货币帮助",
+                "&2&l>> &a/currency create <单数名称> <复数名称> &8- &7创建货币。",
+                "&2&l>> &a/currency delete <复数名称> &8- &7删除货币。",
+                "&2&l>> &a/currency convert <方法> &8- &7转换存储方法。警告：请先备份并确保要切换到的存储是空的！",
+                "&2&l>> &a/currency backend <方法> &8- &7切换后端。这不会转换数据。",
+                "&2&l>> &a/currency view <复数名称> &8- &7查看货币信息。",
+                "&2&l>> &a/currency list &8- &7货币列表。",
+                "&2&l>> &a/currency symbol <复数名称> <字符|删除> &8- &7为货币选择符号或删除符号。",
+                "&2&l>> &a/currency color <复数名称> <颜色> &8- &7为货币选择颜色。",
+                "&2&l>> &a/currency colorlist &8- &7颜色列表。",
+                "&2&l>> &a/currency decimals <复数名称> &8- &7为货币启用小数。",
+                "&2&l>> &a/currency payable <复数名称> &8- &7设置货币是否可支付。",
+                "&2&l>> &a/currency default <复数名称> &8- &7设置为默认货币。",
+                "&2&l>> &a/currency startbal <复数名称> <数量> &8- &7设置货币的起始余额。",
+                "&2&l>> &a/currency setrate <复数名称> <数量> &8- &7设置货币的汇率。"));
 
-        config.addDefault(path + "usage.currency_create", "&2&l>> &a/currency create <singular> <plural> &8- &7Create a currency.");
-        config.addDefault(path + "usage.currency_delete", "&2&l>> &a/currency delete <plural> &8- &7Delete a currency.");
-        config.addDefault(path + "usage.currency_convert", "&2&l>> &a/currency convert <method> &8- &7Convert storage method. WARN: Take backups first and make sure the storage you are switching to is empty!");
-        config.addDefault(path + "usage.currency_backend", "&2&l>> &a/currency backend <method> &8- &7Switch backend. This does not convert.");
-        config.addDefault(path + "usage.currency_view", "&2&l>> &a/currency view <plural> &8- &7View information about a currency.");
-        config.addDefault(path + "usage.currency_list", "&2&l>> &a/currency list &8- &7List of currencies.");
-        config.addDefault(path + "usage.currency_symbol", "&2&l>> &a/currency symbol <plural> <char|remove> &8- &7Select a symbol for a currency or remove it.");
-        config.addDefault(path + "usage.currency_color", "&2&l>> &a/currency color <plural> <color> &8- &7Select a color for a currency.");
-        config.addDefault(path + "usage.currency_colorlist", "&2&l>> &a/currency colorlist &8- &7List of Colors.");
-        config.addDefault(path + "usage.currency_payable", "&2&l>> &a/currency payable <plural> &8- &7Set a currency payable or not.");
-        config.addDefault(path + "usage.currency_default", "&2&l>> &a/currency default <plural> &8- &7Set a currency as default.");
-        config.addDefault(path + "usage.currency_decimals", "&2&l>> &a/currency decimals <plural> &8- &7Enable decimals for a currency.");
-        config.addDefault(path + "usage.currency_startbal", "&2&l>> &a/currency startbal <plural> <amount> &8- &7Set the starting balance for a currency.");
-        config.addDefault(path + "usage.currency_setrate", "&2&l>> &a/currency setrate <plural> <amount> &8- &7Sets the currency's exchange rate.");
+        config.addDefault(path + "usage.currency_create", "&2&l>> &a/currency create <单数名称> <复数名称> &8- &7创建货币。");
+        config.addDefault(path + "usage.currency_delete", "&2&l>> &a/currency delete <复数名称> &8- &7删除货币。");
+        config.addDefault(path + "usage.currency_convert", "&2&l>> &a/currency convert <方法> &8- &7转换存储方法。警告：请先备份并确保要切换到的存储是空的！");
+        config.addDefault(path + "usage.currency_backend", "&2&l>> &a/currency backend <方法> &8- &7切换后端。这不会转换数据。");
+        config.addDefault(path + "usage.currency_view", "&2&l>> &a/currency view <复数名称> &8- &7查看货币信息。");
+        config.addDefault(path + "usage.currency_list", "&2&l>> &a/currency list &8- &7货币列表。");
+        config.addDefault(path + "usage.currency_symbol", "&2&l>> &a/currency symbol <复数名称> <字符|删除> &8- &7为货币选择符号或删除符号。");
+        config.addDefault(path + "usage.currency_color", "&2&l>> &a/currency color <复数名称> <颜色> &8- &7为货币选择颜色。");
+        config.addDefault(path + "usage.currency_colorlist", "&2&l>> &a/currency colorlist &8- &7颜色列表。");
+        config.addDefault(path + "usage.currency_payable", "&2&l>> &a/currency payable <复数名称> &8- &7设置货币是否可支付。");
+        config.addDefault(path + "usage.currency_default", "&2&l>> &a/currency default <复数名称> &8- &7设置为默认货币。");
+        config.addDefault(path + "usage.currency_decimals", "&2&l>> &a/currency decimals <复数名称> &8- &7为货币启用小数。");
+        config.addDefault(path + "usage.currency_startbal", "&2&l>> &a/currency startbal <复数名称> <数量> &8- &7设置货币的起始余额。");
+        config.addDefault(path + "usage.currency_setrate", "&2&l>> &a/currency setrate <复数名称> <数量> &8- &7设置货币的汇率。");
 
         config.options().copyDefaults(true);
         plugin.saveConfig();
