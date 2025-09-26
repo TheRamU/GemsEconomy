@@ -43,6 +43,16 @@ public class CurrencyManager {
     }
 
     public Currency getDefaultCurrency() {
+        // 尝试从配置中获取默认货币
+        String configDefaultCurrency = plugin.getConfig().getString("default_currency");
+        if (configDefaultCurrency != null && !configDefaultCurrency.isEmpty()) {
+            Currency configCurrency = getCurrency(configDefaultCurrency);
+            if (configCurrency != null) {
+                return configCurrency;
+            }
+        }
+
+        // 配置中没有找到，使用原有的默认货币机制
         for (Currency currency : currencies) {
             if (!currency.isDefaultCurrency()) continue;
             return currency;
