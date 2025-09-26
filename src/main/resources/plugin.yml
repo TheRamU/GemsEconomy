@@ -1,7 +1,7 @@
 name: GemsEconomy
 main: me.xanium.gemseconomy.GemsEconomy
 version: ${version}
-author: Xanium
+authors: [Xanium, TheRamU]
 description: A multi-currency economy plugin for spigot servers!
 website: https://www.spigotmc.org/resources/gemseconomy.19655/
 load: STARTUP
